@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu12312312:18.04
 
 ENV container docker
 
