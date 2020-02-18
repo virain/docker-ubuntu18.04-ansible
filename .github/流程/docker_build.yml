@@ -1,14 +1,11 @@
-name: CI
-
+name: Dcoker Build
 on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@master
     - name: Docker Build
       run: |
         docker build -t ubuntu18.04-ansible .
