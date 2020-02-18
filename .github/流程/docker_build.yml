@@ -1,6 +1,6 @@
-name: Dcoker Build
-on: [push]
+name: Docs Build and Upload
 
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
