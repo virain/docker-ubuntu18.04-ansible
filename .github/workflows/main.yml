@@ -1,0 +1,15 @@
+name: Docs Build and Upload
+
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Docker Build
+      run: |
+        docker build -t ubuntu18.04-ansible .
+        docker run --name test-container -d --privileged ubuntu18.04-ansible
+        docker exec --tty test-container env TERM=xterm ps aux
+        
+ 
