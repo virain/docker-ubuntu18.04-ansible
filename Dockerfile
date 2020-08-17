@@ -10,6 +10,8 @@ RUN find /etc/systemd/system \
     -not -name '*systemd-user-sessions*' \
     -exec rm \{} \;
 
+COPY sources.list  /etc/apt/sources.list
+
 RUN apt-get update && \
     apt-get install -y \
     dbus systemd sudo python3-pip && \
